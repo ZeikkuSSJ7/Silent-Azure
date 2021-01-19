@@ -1,0 +1,48 @@
+language: php
+php:
+    - 7.1
+    - 7.2
+    - 7.3
+    - 7.4
+    - nightly
+
+matrix:
+    allow_failures:
+        - php: nightly
+    fast_finish: true
+
+env:
+    matrix:
+        - DEPENDENCIES="high"
+        - DEPENDENCIES="low"
+    global:
+        - DEFAULT_COMPOSER_FLAGS="--no-interaction --ansi --no-progress --no-suggest --prefer-dist"
+
+cache:
+    directories:
+        - $HOME/.composer/cache
+
+before_install:
+    # Install p7zip
+    #  - sudo apt-get install p7zip-full
+    - curl -L http://downloads.sourceforge.net/project/p7zip/p7zip/16.02/p7zip_16.02_src_all.tar.bz2 > p7zip_16.02_src_all.tar.bz2
+    - tar xjvf p7zip_16.02_src_all.tar.bz2
+    - cd p7zip_16.02
+    - make all3
+    - sudo ./install.sh
+    - sudo ln /usr/local/bin/7za /usr/bin/7za
+    - sudo ln /usr/local/bin/7z /usr/bin/7z
+    - cd ..
+
+    - composer validate
+
+install:
+    - if [[ "$DEPENDENCIES" = 'high' ]]; then travis_retry composer update $DEFAULT_COMPOSER_FLAGS; fi
+    - if [[ "$DEPENDENCIES" = 'low' ]]; then travis_retry composer update $DEFAULT_COMPOSER_FLAGS --prefer-lowest; fi
+
+script:
+    - vendor/bin/phpunit --configuration phpunit.xml.dist
+
+notifications:
+    email:
+        on_failure: change

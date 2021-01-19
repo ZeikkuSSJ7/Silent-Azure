@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    color: #AAAAAA;
+    scrollbar-color: black #444444;
+    scrollbar-width: thin;
+}
+
+.content-button {
+    width: 100%;
+    background-color: #333333;
+    text-align: left;
+    padding: 5%;
+    box-sizing: border-box;
+    display: inline-flex;
+}
+
+.category {
+    width: 100%;
+    background-color: #333333;
+    text-align: left;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #444444;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #000000;
+}
+
+.card {
+    width: 245px;
+    height: 380px;
+    background-color: #444444;
+    box-sizing: border-box;
+    padding: 5px;
+    border: 1px solid black;
+    float: left;
+    margin: 1px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.card-image {
+    width: 100%;
+    flex-grow: 1;
+}
+
+.card-title {
+    background-color: #333333;
+    padding: 6px;
+    box-sizing: border-box;
+    text-align: left;
+    color: #CCCCCC;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.planned { border: 1px solid red; }
+.playing { border: 1px solid rgb(1, 101, 252); }
+.hold { border: 1px solid #00CC00; }
+.dropped { border: 1px solid rgb(128, 0, 128); }
+.completed { border: 1px solid #00ffff; }
+.mastered { border: 1px solid #daa520; }
+
+.user-menu {
+    box-sizing: border-box;
+    width: 100%; 
+    height: 35px; 
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.user-controls {
+    width: auto;
+    height: 100%;
+    background-color: #333333;
+    overflow: hidden;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(1, 101, 252);
+    max-width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(0, 73, 184);
+}
+
+.user-data:hover .dropdown-content {
+    display: block;
+}
+
+.user-controls .back-button {
+    height: 100%; 
+    width: 25px; 
+    background: url('/images/icons/back-button.png') center center / contain no-repeat; 
+    background-size: 25px; 
+    padding: 0px 10px;
+    float: left;
+}
+
+.user-controls .profile {
+    height: 100%; 
+    width: 25px; 
+    background: url('/images/icons/icon-profile.png') center center / contain no-repeat; 
+    background-size: 25px; 
+    float: left;
+}
+
+.user-data {
+    float: right; 
+    height: 100%;
+    padding: 0 5px;
+}
+
+.user-data:hover {
+    background-color: rgb(0, 73, 184);
+}
+
+.user-controls .back-button:hover {
+    cursor: pointer;
+}
+
+.master-wrapper {
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.content-button:hover {
+    background-color: #444444;
+}
+
+.content-text {
+    color: #AAAAAA;
+    margin: auto 10px;
+}
+
+.content-button i {
+    width: 30px;
+    height: 30px;
+}
+
+.icon-search-web {
+    background: url('/images/azurelog/icons/search-web-icon.png') center center / contain no-repeat;
+}
+
+.icon-playing {
+    background: url('/images/azurelog/icons/playing-icon.png') center center / contain no-repeat;
+}
+
+.icon-planned {
+    background: url('/images/azurelog/icons/plan-to-play-icon.png') center center / contain no-repeat;
+}
+
+.icon-hold {
+    background: url('/images/azurelog/icons/on-hold-icon.png') center center / contain no-repeat;
+}
+
+.icon-dropped {
+    background: url('/images/azurelog/icons/dropped-icon.png') center center / contain no-repeat;
+}
+
+.icon-completed {
+    background: url('/images/azurelog/icons/completed-icon.png') center center / contain no-repeat;
+}
+
+.icon-mastered {
+    background: url('/images/azurelog/icons/mastered-icon.png') center center / contain no-repeat;
+}
+
+.icon-all-games {
+    background: url('/images/azurelog/icons/all-games-icon.png') center center / contain no-repeat;
+}
+
+.fab-wrapper {
+    position: fixed; 
+    right: 0; 
+    bottom: 0; 
+    width: 60px;
+    height: 60px;
+    background-color: rgb(1, 101, 252); 
+    border-radius: 5em;
+    margin: 12px;
+}
+
+.fab-wrapper.small {
+    width: 30px;
+    height: 30px;
+    margin: 17px;
+    padding: 6px;
+}
+
+.fab {
+    width: 100%;
+    height: 100%;
+    background: url('/images/azurelog/icons/fab-icon.png') center center / contain no-repeat;
+    background-size: 30px;
+    outline: none; 
+    border: none; 
+}
+
+.fab.order {
+    background: url('/images/azurelog/icons/order-icon.png') center center / contain no-repeat;
+    background-size: 30px;
+}
+
+.fab.random {
+    background: url('/images/azurelog/icons/random-game-icon.png') center center / contain no-repeat;
+    background-size: 30px;
+}
+
+.fab.new-game {
+    background: url('/images/azurelog/icons/new-game-icon.png') center center / contain no-repeat;
+    background-size: 30px;
+}
+
+.fab.search {
+    background: url('/images/icons/search-icon.png') center center / contain no-repeat;
+    background-size: 30px;
+}
+
+body {
+    width: 100%; 
+    height: 100vh; 
+    background-color: #222222; 
+    margin: 0px;
+    text-align: center;
+}
+
+div.my-container{
+    width: 100%; 
+    height: 95%; 
+    display: inline-flex; 
+    overflow: hidden;
+}
+
+div.drawer {
+    width: 22%; 
+    min-width: 200px;
+    height: 100%; 
+    border: 1px solid black;
+}
+
+.wrapper {
+    width: 78%; 
+    height: 100%; 
+    box-sizing: border-box; 
+    display: flex; 
+    flex-direction: column;
+}

@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    color: #AAAAAA;
+    scrollbar-color: black #444444;
+    scrollbar-width: thin;
+}
+
+.content-button {
+    width: 100%;
+    background-color: #333333;
+    text-align: left;
+    padding: 5%;
+    box-sizing: border-box;
+    display: inline-flex;
+}
+
+.category {
+    width: 100%;
+    background-color: #333333;
+    text-align: left;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container-cards {
+    height: 100%;
+    display: inline-flex;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #444444;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #000000;
+}
+
+.z-flow {
+    height: 406px; 
+    overflow-x: scroll;
+}
+
+.card {
+    width: 250px;
+    height: 380px;
+    background-color: #444444;
+    box-sizing: border-box;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.card-image {
+    width: 100%;
+    height: 80%;
+}
+
+.card-title {
+    color: #CCCCCC;
+    width: 100%;
+    height: 20%;
+    margin: auto;
+}
+
+.user-menu {
+    box-sizing: border-box;
+    width: 100%; 
+    height: 35px; 
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.user-controls {
+    width: auto;
+    height: 100%;
+    background-color: #333333;
+    overflow: hidden;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(1, 101, 252);;
+    max-width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(0, 73, 184);
+}
+
+.user-data:hover .dropdown-content {
+    display: block;
+}
+
+.user-controls .back-button {
+    height: 100%; 
+    width: 25px; 
+    background: url('/images/icons/back-button.png') center center / contain no-repeat; 
+    background-size: 25px; 
+    padding: 0px 10px;
+    float: left;
+}
+
+.user-controls .profile {
+    height: 100%; 
+    width: 25px; 
+    background: url('/images/icons/icon-profile.png') center center / contain no-repeat; 
+    background-size: 25px; 
+    float: left;
+}
+
+.user-data {
+    float: right; 
+    height: 100%;
+    padding: 0 5px;
+}
+
+.user-data:hover {
+    background-color: rgb(0, 73, 184);
+}
+
+.user-controls .back-button:hover {
+    cursor: pointer;
+}
+
+.master-wrapper {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.master-main-page {
+    width: 100%;
+    height: 100%;
+}
+
+.master-main-page > div > .card {
+    width: 250px;
+    height: 354px;
+    float: left;
+}
+
+.content-button:hover {
+    background-color: #444444;
+}
+
+.content-text {
+    color: #AAAAAA;
+    margin: auto 10px;
+}
+
+.content-button i {
+    width: 60px;
+    height: 60px;
+}
+
+.icon-search {
+    background: url('/images/icons/search-content-button-icon.png') center center / contain no-repeat;
+}
+
+.icon-anime {
+    background: url('/images/icons/anime-button-icon.png') center center / contain no-repeat;
+}
+
+.icon-games {
+    background: url('/images/icons/games-button-icon.png') center center / contain no-repeat;
+}
+
+.icon-soundtracks {
+    background: url('/images/icons/soundtracks-button-icon.png') center center / contain no-repeat;
+}
+
+.icon-azurelog {
+    background: url('/images/icons/azurelog-button-icon.png') center center / contain no-repeat;
+}
+
+body {
+    width: 100%; 
+    height: 100vh; 
+    background-color: #222222; 
+    margin: 0px;
+    text-align: center;
+}
+
+div.my-container{
+    width: 100%; 
+    display: inline-flex; 
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+div.drawer {
+    width: 22%; 
+    min-width: 200px;
+    height: 100%; 
+    border: 1px solid black;
+}

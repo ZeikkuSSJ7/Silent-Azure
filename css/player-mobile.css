@@ -1,0 +1,209 @@
+div.player * {
+    font-size: 14px;
+}
+.song-album div.song, .song-album div.album {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+
+.song-album {
+    height: 100%;
+}
+
+.cover {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.like {
+    background: url('/images/soundtracks/player/like-button.png') center center / contain no-repeat;
+    background-size: 20px;
+}
+
+.liked {
+    background: url('/images/soundtracks/player/liked-button.png') center center / contain no-repeat;
+    background-size: 20px;
+}
+
+    /* loop button states */
+
+.no-loop {
+    background: url('/images/soundtracks/player/no-loop.png') center center / contain no-repeat;
+    background-size: 20px;
+}
+
+.loop-all {
+    background: url('/images/soundtracks/player/loop-all.png') center center / contain no-repeat;
+    background-size: 20px;
+}
+
+.loop-one {
+    background: url('/images/soundtracks/player/loop-one.png') center center / contain no-repeat;
+    background-size: 20px;
+}
+
+    /* Player buttons */
+
+.previous {
+    background: url('/images/soundtracks/player/previous.png') center center / contain no-repeat;
+    background-size: 15px;
+}
+
+.play-button {
+    background: url('/images/soundtracks/player/play.png') center center / contain no-repeat;
+    background-size: 30px;
+}
+
+.pause-button {
+    background: url('/images/soundtracks/player/pause.png') center center / contain no-repeat;
+    background-size: 30px;
+}
+
+.next {
+    background: url('/images/soundtracks/player/next.png') center center / contain no-repeat;
+    background-size: 15px;
+}
+
+    /* Random button states */
+
+.random {
+    background: url('/images/soundtracks/player/random.png') center center / contain no-repeat;
+    background-size: 15px;
+}
+.random-active {
+    background: url('/images/soundtracks/player/random-active.png') center center / contain no-repeat;
+    background-size: 15px;
+}
+
+    /* General button styles */
+
+div.player button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 5em;
+}
+
+div.player button:focus{
+    outline: 0;
+}
+
+div.player button.play-button{
+    background-color: rgb(0, 73, 184);
+}
+
+.progress .ui-slider-handle {
+    top: -4px !important;
+}
+
+.volume .ui-slider-handle{
+    top: -5px !important;
+}
+
+.volume .ui-slider-handle, .progress .ui-slider-handle {
+    border-radius: 50%;
+    width: 11px !important;
+    height: 11px !important;
+    margin-left: -5px !important;
+}
+
+.player {
+    width: 100%;
+    height: 86px;
+    background: rgb(1, 101, 252);
+    position: sticky;
+    bottom: 0;
+    left: 0;
+}
+
+.timer-text {
+    width: fit-content;
+    text-align: right;
+    float: right;
+}
+
+.vol-min {
+    width: 25px;
+    height: 20px;
+    background: url('/images/soundtracks/player/volume-min.png') center center / contain no-repeat;
+    background-size: 20px;
+    opacity: 0;
+}
+
+div.player .volume {
+    width: 10vw;
+    max-width: 100px;
+    height: 2px;
+    border: 1px solid black;
+    background: rgb(255, 222, 35);
+    border: 1px solid black;
+    opacity: 0;
+}
+
+.vol-max {
+    width: 25px;
+    height: 20px;
+    background: url('/images/soundtracks/player/volume-max.png') center center / contain no-repeat;
+    background-size: 20px;
+}
+
+.container {
+    width: 100%;
+    height: 82px;
+    display: inline-block; 
+    text-align: center;
+}
+
+.box{
+    width: 100%;
+    display: inline-flex; 
+    height: 100%;
+}
+
+div.player .controls {
+    width: 40%;
+    height: 100%;
+    display: inline-block;
+}
+
+.wrapper-cover-song-album {
+    width: 35%;
+    float: left;
+    height: 100%;
+}
+
+.wrapper-timer-volume {
+    width: 30%;
+    height: 100%;
+    float: right;
+}
+
+
+div.player .controls div div * {
+    display: inline-flex;
+    vertical-align: middle;
+    margin: auto;
+}
+
+.flex-align {
+    margin: auto 3px;
+    padding: 10px;
+}
+
+div.player .progress {
+    border: 1px solid black;
+    height: 3px;
+    background: rgb(255, 222, 35);
+}
+
+.volume-container {
+    width: 100%;
+    margin: 0px;
+    float: right;
+}
+
+div.player table {
+    border-spacing: 15px 0px;
+}

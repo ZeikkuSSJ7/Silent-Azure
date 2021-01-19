@@ -1,0 +1,149 @@
+[
+    {
+        "name": "gemorroj/archive7z",
+        "version": "5.0.0",
+        "version_normalized": "5.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Gemorroj/Archive7z.git",
+            "reference": "daa6442d96820fb27a6671996a381036d7909786"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Gemorroj/Archive7z/zipball/daa6442d96820fb27a6671996a381036d7909786",
+            "reference": "daa6442d96820fb27a6671996a381036d7909786",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^7.1.3",
+            "symfony/process": "^4.0|^5.0"
+        },
+        "require-dev": {
+            "friendsofphp/php-cs-fixer": "^2.16",
+            "phpunit/phpunit": "^7.5"
+        },
+        "time": "2019-12-31T09:55:56+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Archive7z\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-3.0"
+        ],
+        "authors": [
+            {
+                "name": "Gemorroj"
+            }
+        ],
+        "description": "7z cli wrapper",
+        "keywords": [
+            "7-zip",
+            "7z",
+            "7zip",
+            "archive",
+            "p7zip"
+        ]
+    },
+    {
+        "name": "symfony/process",
+        "version": "v5.0.5",
+        "version_normalized": "5.0.5.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/process.git",
+            "reference": "fd4a86dd7e36437f2fc080d8c42c7415d828a0a8"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/process/zipball/fd4a86dd7e36437f2fc080d8c42c7415d828a0a8",
+            "reference": "fd4a86dd7e36437f2fc080d8c42c7415d828a0a8",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^7.2.5"
+        },
+        "time": "2020-02-08T17:00:58+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "5.0-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Component\\Process\\": ""
+            },
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony Process Component",
+        "homepage": "https://symfony.com"
+    },
+    {
+        "name": "wapmorgan/mp3info",
+        "version": "0.0.5",
+        "version_normalized": "0.0.5.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/wapmorgan/Mp3Info.git",
+            "reference": "0dc3d62d155d6b7c25bc0568fd8a93924449020c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/wapmorgan/Mp3Info/zipball/0dc3d62d155d6b7c25bc0568fd8a93924449020c",
+            "reference": "0dc3d62d155d6b7c25bc0568fd8a93924449020c",
+            "shasum": ""
+        },
+        "require": {
+            "ext-mbstring": "*",
+            "php": ">=5.4.0"
+        },
+        "require-dev": {
+            "wapmorgan/terminal-info": "dev-master"
+        },
+        "time": "2019-12-03T00:57:48+00:00",
+        "bin": [
+            "bin/mp3scan"
+        ],
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "wapmorgan\\Mp3Info\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "LGPL-3.0"
+        ],
+        "description": "The fastest php library to extract mp3 tags & meta information.",
+        "keywords": [
+            "audio",
+            "id3",
+            "id3v1",
+            "id3v2",
+            "mp3",
+            "mpeg"
+        ]
+    }
+]

@@ -1,0 +1,13 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Archive7z\\": "vendor/7z/",
+            "wapmorgan\\Mp3Info\\": "vendor/MP3Info",
+            "Symfony\\Component\\Process\\": "vendor/Process"
+        }
+    },
+    "require": {
+        "gemorroj/archive7z": "^5.0",
+        "wapmorgan/mp3info": "^0.0.5"
+    }
+}
