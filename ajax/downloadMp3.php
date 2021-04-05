@@ -1,7 +1,7 @@
 <?php
 $id = $_GET['id'];
 
-$database = new mysqli("localhost", "phpmyadmin", "root", "silentazure");
+$database = new mysqli("localhost", "phpmyadmin", "qWOKferZEIK93tPoKENe24", "silentazure");
 if ($database->connect_error) :
     die("Connection failed: " . $database->connect_error);
 endif;

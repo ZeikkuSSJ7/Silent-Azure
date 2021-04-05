@@ -12,6 +12,7 @@ var $playbutton;
  */
 function loadPlayer() {
     audio = $(".real-audio")[0];
+    $('.master-wrapper').css('height', '88%');
     
     // asignación de funciones al objeto Audio
     audio.onloadedmetadata = setTime;

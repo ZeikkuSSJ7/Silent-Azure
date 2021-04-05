@@ -1,6 +1,6 @@
 <?php 
 
-echo '<select id="score" style="color: black;">';
+echo '<select id="score" style="color: black; width: 100%">';
 
 $result = $database->query("SELECT * FROM azurelog_score_types;");
 while ($row = $result->fetch_assoc()) :

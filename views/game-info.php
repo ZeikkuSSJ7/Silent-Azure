@@ -35,7 +35,7 @@ endif;
 ?>
 
 
-<div style="width: 100%; height: 100%">
+<div style="width: 100%;  /**height: 100%*/">
     <div class="game-cover-score" style="padding: 10px; box-sizing: border-box; color: #AAAAAA; border-right: 1px solid black">
         <img src="<?php echo $image ?>" style="width: 100%;">
         <?php echo 'Nombre: ' . $name . '<br>';?>
@@ -99,5 +99,16 @@ endif;
                 </tr>
             </tbody>
         </table>
+        <div class="game-screenshots" style="width:90%; margin: 10px auto;">
+            <b>Capturas de pantalla</b><br>
+            <?php 
+                $screenshotsFolder = IMAGES_ROOT_LOCAL . GAME_SCREENSHOTS . "/" . $id . "/*";
+                $index = 0;
+                foreach (glob($screenshotsFolder, ) as $screenshot){
+                    echo '<img style="max-width: 31.85%; margin: 0.5%;" src="' . GAME_SCREENSHOTS . "/" . $id . "/" . $index . '.png">';
+                    $index++;
+                }
+            ?>
+        </div>
     </div>
 </div>

@@ -9,6 +9,7 @@ if (!isset($database)) :
     define('USER_IMAGE_DIR', '/images/users');
     define('IMAGES_ROOT_LOCAL', 'C:/ServerData');
     define('AZURELOG_IMAGES_DIR', '/images/azurelog/covers');
+    define('GAME_SCREENSHOTS', '/images/games/screenshots');
 
     session_start();
 
