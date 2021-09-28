@@ -26,13 +26,21 @@
             while (($row = $result->fetch_assoc())) :
                 $platform = $row['platform'];
                 $id = $row['id'];
-                $htmlString = '<div class="card platform" id="' . $id . '">
-                        <img width="100%" src="/images/games/systems/' . $platform . '.png">
-                        <p>' . $platform . '</p>
-                        <p>Juegos: ' . $platforms[$id]['totalGames'] . '</p>
-                        <p>Descargas: ' . $platforms[$id]['totalDl'] . '</p>
-                        <p>Tamaño de la base de datos: ' . sizeString($platforms[$id]['totalSize']) . '</p>
-                    </div>';
+                if ($id == 17){
+                        
+                    $htmlString = '<div class="card platform" id="' . $id . '">
+                            <img width="100%" src="/images/games/systems/' . $platform . '.png">
+                            <p>' . $platform . '</p>
+                        </div>';
+                } else {
+                    $htmlString = '<div class="card platform" id="' . $id . '">
+                            <img width="100%" src="/images/games/systems/' . $platform . '.png">
+                            <p>' . $platform . '</p>
+                            <p>Juegos: ' . $platforms[$id]['totalGames'] . '</p>
+                            <p>Descargas: ' . $platforms[$id]['totalDl'] . '</p>
+                            <p>Tamaño de la base de datos: ' . sizeString($platforms[$id]['totalSize']) . '</p>
+                        </div>';
+                }
                 echo $htmlString;
             endwhile;
             ?>

@@ -1,6 +1,11 @@
 <?php
 include "../config.php";
 
+if (isset($_GET['nointro'])){
+    echo (str_replace('%20', ' ', $_GET['nointro']));
+    xSendfile('E:/AZURE_CONSOLES/Vault/' . str_replace('%20', ' ', $_GET['nointro']), str_replace('%20', ' ', $_GET['nointro']));
+}
+
 if (isset($_GET['contentType']) && isset($_GET['contentId'])) :
     $contentId = $_GET['contentId'];
     $contentType = $_GET['contentType'];
@@ -30,10 +35,10 @@ if (isset($_GET['contentType']) && isset($_GET['contentId'])) :
 
             updateDownloadContent($database, $userId, $contentId, $contentType);
 
-            $result = $database->query('SELECT g.name, p.platform, location FROM games g INNER JOIN platforms p on g.platform = p.id where g.id = ' . $contentId);
+            $result = $database->query('SELECT g.name, g.location, p.platform, location FROM games g INNER JOIN platforms p on g.platform = p.id where g.id = ' . $contentId);
             $row = $result->fetch_assoc();
 
-            $file = 'E:/AZURE_CONSOLES/' . $row['platform'] . '/' . $row['name'] . '/' . $row['name'] . '.7z';
+            $file = 'E:/AZURE_CONSOLES/' . $row['platform'] . '/' . $row['name'] . $row['location'];
 
             xSendfile($file, basename($file));
         else :

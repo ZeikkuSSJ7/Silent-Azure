@@ -68,7 +68,23 @@ table.roms td {
     border-collapse: separate;
 }
 
-.game-info-wrapper table, .game-info-wrapper th, .game-info-wrapper td, .soundtrack-info-wrapper table, .soundtrack-info-wrapper th, .soundtrack-info-wrapper td{
+.rom-info {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.rom-info th, .rom-info td  {
+    border-top: 2px solid grey;
+    padding: 0.4375em;
+}
+
+.rom-info th {
+    width: 15%;
+    white-space: nowrap;
+    font-weight: 700;
+}
+
+.soundtrack-info-wrapper table, .soundtrack-info-wrapper th, .soundtrack-info-wrapper td{
     background-color: #444444;
     border: 1px solid black;
     border-collapse: collapse;

@@ -27,6 +27,25 @@
         endif;
         if ($category == "games") : // en caso de ser juegos...
             if (isset($_GET['platform'])) : // hay plataforma filtrando? añadelo
+                if ($_GET['platform'] == 17){
+                    echo '<div style="background: #333333; box-sizing: border-box; border: 1px solid black; padding: 10px;">
+                        <p>
+                            Bienvenido al archivo de romsets de No-Intro! Aquí encontrarás ROMs de consolas que tienen colecciones 
+                            demasiado pequeñas como para popular el servidor y se pueden descargar del tirón, así que están disponibles 
+                            para todo el mundo sin limite de descarga de usuario. ¡Disfruta!
+                        </p>
+                        <div style="background: #222222; margin: 5px; box-sizing: border-box; border: 1px solid black;">';
+                            
+                            
+                            foreach (glob('E:/AZURE_CONSOLES/Vault/*') as $nointro) :
+                                echo '<p style="text-align: left; margin: 4px;"><a href="/ajax/down.php?nointro=' . basename($nointro) . '">' . basename($nointro) . '</a></p>';
+                            endforeach;
+                            
+                            echo '
+                        </div>
+                    </div>';
+                    die();
+                }
                 $sql = 'SELECT g.id, name, p.platform FROM ' . $category . ' g inner join platforms p on p.id = g.platform where g.platform = ' . $_GET['platform']. ' order by name';
             else : // si no...
                 if ($q == "\"#%\"") : // busca por número? cmabialo por un regexp
